@@ -10,7 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ZoomControls;
 
 import com.example.luissam.mit.R;
 
@@ -20,6 +23,8 @@ public class OneFrag extends Fragment
     TextView txv1,txv2,txv3,txv4,txv5;
     Button btn1,btn2,btn3,btn4,btn5,btn6,btnOK;
     View myView;
+
+    ImageView img;
 
 
 
@@ -111,11 +116,13 @@ public class OneFrag extends Fragment
         Drawable bitmap;
 
         LayoutInflater inflater = getLayoutInflater(getArguments());
-        View dialoglayout = inflater.inflate(R.layout.dialogomuestra, null);
+        View dialoglayout = inflater.inflate(R.layout.imagev, null);
         txv1 = (TextView) dialoglayout.findViewById(R.id.txv1);
         txv2 = (TextView) dialoglayout.findViewById(R.id.txv2);
         txv3 = (TextView) dialoglayout.findViewById(R.id.txv3);
         txv4 = (TextView) dialoglayout.findViewById(R.id.txv4);
+
+        img = (ImageView) dialoglayout.findViewById(R.id.ImV) ;
         final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
 
 
@@ -125,11 +132,13 @@ public class OneFrag extends Fragment
             case R.id.btn1:
 
 
-                txv1.setText("Pem\nArturo Avila");
+                /*txv1.setText("Pem\nArturo Avila");
                 txv2.setText("Oem\nChrysler");
                 txv3.setText("Constrution\n-Capri -McKinley  -Nappa\n-Natura Plus -Bristol\nNatura Plus Chrome - Free");
-                txv4.setText("Location\nLeon");
+                txv4.setText("Location\nLeon");*/
 
+
+                img.setImageResource(R.drawable.arturoavila);
 
                 builder.setView(dialoglayout);
                 builder.show();
@@ -138,12 +147,12 @@ public class OneFrag extends Fragment
 
             case R.id.btn2:
 
-                txv1.setText("Pem\nCarlos Gonzalez");
-                txv2.setText("Oem\nDaimier");
-                txv3.setText("Constrution\n-Lugano -Locarno\n-Nappa");
-                txv4.setText("Location\nS/I");
+                //txv1.setText("Pem\nCarlos Gonzalez");
+                //txv2.setText("Oem\nDaimier");
+                //txv3.setText("Constrution\n-Lugano -Locarno\n-Nappa");
+                //txv4.setText("Location\nS/I");
 
-
+                img.setImageResource(R.drawable.carlosgonzalez);
                 builder.setView(dialoglayout);
                 builder.show();
 
@@ -151,12 +160,12 @@ public class OneFrag extends Fragment
 
             case R.id.btn3:
 
-                txv1.setText("Pem\nClaudia Manrique");
+                /*txv1.setText("Pem\nClaudia Manrique");
                 txv2.setText("Oem\nToyota");
                 txv3.setText("Constrution\n-Sovereign -Luxor Savant -Noble II\n-Sovereign II -Noble II Athens");
-                txv4.setText("Location\nS/I");
+                txv4.setText("Location\nS/I");*/
 
-
+                img.setImageResource(R.drawable.marique);
                 builder.setView(dialoglayout);
                 builder.show();
 
@@ -164,12 +173,12 @@ public class OneFrag extends Fragment
 
             case R.id.btn4:
 
-                txv1.setText("Pem\nMiguel Ochoa");
+                /*txv1.setText("Pem\nMiguel Ochoa");
                 txv2.setText("Oem\nBMW");
                 txv3.setText("Constrution\n-Nevada -Dakota\n-Vernazca -Merino");
-                txv4.setText("Location\nS/I");
+                txv4.setText("Location\nS/I");*/
 
-
+                img.setImageResource(R.drawable.miguelochoa);
                 builder.setView(dialoglayout);
                 builder.show();
 
@@ -178,12 +187,12 @@ public class OneFrag extends Fragment
 
             case R.id.btn5:
 
-                txv1.setText("Pem\nAntonio Ortega");
+                /*txv1.setText("Pem\nAntonio Ortega");
                 txv2.setText("Oem\n-Ford\n-GM\n-VW");
                 txv3.setText("Constrution\nFord: Verona\n\nGM: -Meridian -Kiesel NA -Soleli Kiesel\n-Naunce -Athens -Mulan\n\nVW:Vienna");
-                txv4.setText("Location\nS/I");
+                txv4.setText("Location\nS/I");*/
 
-
+                img.setImageResource(R.drawable.antonioortega);
                 builder.setView(dialoglayout);
                 builder.show();
 
@@ -191,12 +200,13 @@ public class OneFrag extends Fragment
 
             case R.id.btn6:
 
-                txv1.setText("Pem\nRidardo Reyes");
+                /*txv1.setText("Pem\nRidardo Reyes");
                 txv2.setText("Oem\n-NISSAN -KIA -HYUNDAI\n-HONDA -INFINITI -ACURA");
                 txv3.setText("Constrution\nNISSAN: -Ascot - Bison -Camden\n-Duke -Oxford -Walknappa\n\nACURA: -Shelf 2\n\nHONDA: -Abbot\nHYUNDAI: Genoa\nINFINITY: -Asot KIA: -Momaco -Vnatto");
-                txv4.setText("Location\nS/I");
+                txv4.setText("Location\nS/I");*/
 
 
+                img.setImageResource(R.drawable.ricardo);
                 builder.setView(dialoglayout);
                 builder.show();
 
@@ -215,6 +225,7 @@ public class OneFrag extends Fragment
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 
 
 
